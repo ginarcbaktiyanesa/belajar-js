@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Konversi String Number</title>
+</head>
+<body>
+    <script>
+        const value1 = "1";
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${sum}</p>`); // hasilnya 11 tanpa konversi
+        
+        const value3 = parseInt("1");
+        const value4 = 1;
+        const sum1 = value3 + value4;
+
+        document.writeln(`<p>${sum1}</p>`); // hasilnya 2 dengan konversi
+
+        document.writeln(`<p>${parseInt("1.1")}</p>`); // yg belakang tidak dianggap hasil : 1
+        document.writeln(`<p>${parseFloat("1.1")}</p>`);
+        document.writeln(`<p>${Number("1.1")}</p>`); // fleksibel bisa bulat atau pecahan
+
+        const a = 1;
+        const b = 1;
+        const total = a.toString() + b.toString();
+
+        document.writeln(`<p>${total}</p>`);
+
+        //parseInt(string) mengkonversi string ke number (bulat)
+        //parseFloat(string) mengkonversi string ke number (pecahan)
+        //Number(string) mengkonversi string ke number (bulat atau pecahan)
+        //number.to(string) mengkonversi number ke string
+
+
+        // NaN (Not a Number)
+        //kesalahan dibelakang tidak dianggap
+        document.writeln(`<p>${parseInt("Salah")}</p>`); //hasil Nan
+        document.writeln(`<p>${parseInt("1Salah")}</p>`); //hasil 1
+        document.writeln(`<p>${parseFloat("1.1ginar")}</p>`); // hasil 1.1
+
+        //tidak ada toleransi kesalahan
+        document.writeln(`<p>${Number("Salah")}</p>`); //hasil NaN
+        document.writeln(`<p>${Number("1.1ginar")}</p>`); // hasil NaN
+
+        // operasi pada NaN
+        // kalau di operasi kan dengan nan hasil akan nan
+        const satu = Number("salah"); //NaN
+        const dua = satu+100;
+        document.writeln(`<p>${dua}</p>`); //hasil NaN
+        
+
+        //isNaN untuk mengecek apakah nan atau bukan
+        document.writeln(`<p>${isNaN(satu)}</p>`); //hasil true
+        document.writeln(`<p>${isNaN(100)}</p>`); //hasil false
+        document.writeln(`<p>${isNaN(NaN)}</p>`); //hasil true
+
+    </script>
+</body>
+</html>

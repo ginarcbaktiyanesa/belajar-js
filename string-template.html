@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        // menggunakan bactick
+        // supaya gausah pake + name
+        const name = "Ginar Cut Baktiyanesa";
+        const firstName = "Ginar";
+        const panggilName = "Nay";
+        const template1 = `Name : ${name}`;
+
+        //sesudah
+        const template = `Name : ${firstName} ${panggilName}`;
+        //sebelum
+        const lama = "Name : " + firstName + " " + panggilName;
+
+        console.info(template1);
+        console.info(template);
+        console.info(lama);
+
+
+        //substitusi
+        const nilai = 90;
+        const template2 = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+        console.info(template2);
+
+
+        //multiline string
+        const multiLine = `Nama Saya Ginar,
+Mahasiswa akhir,
+Sedang mengerjakan skripsi,
+saya pasti bisa`;
+
+        document.writeln("<pre>");
+        document.writeln(multiLine);
+        document.writeln("</pre>");
+
+    </script>
+</body>
+</html>
