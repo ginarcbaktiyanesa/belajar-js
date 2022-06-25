@@ -4,6 +4,12 @@
     <title>Array</title>
 </head>
 <body>
+
+    <!-- array.push(value) untuk tambah data -->
+    <!-- array.length untuk mendapat panjang array
+    array[index] untuk dapat posisi index
+    array[index] = value , untuk ubah data posisi index
+    delete array[index] untuk hapus data pada index, tidak akan menggeser index -->
     <script>
         // let arrayKosong = [];
 
@@ -19,6 +25,26 @@
         names.push("Cut", "Baktiyanesa");
 
         console.table(names);
+
+        console.info(names[1]);
+
+        //ubah data
+        names[0] = "journaey";
+        console.table(names);
+        
+        //meski sudah di hapus length tetap bertambah tidak berkurang
+        delete names[1];
+        console.table(names);
+
+        //tambah data
+        names.push("Ginar lagi");
+        names.push(1,2,3);
+        console.table(names);
+        
+        //bisa memasukkan array ke dalam array (multidimensional array)
+        names.push(["nay", "nae"]);
+        console.table(names);
+        
     </script>
 </body>
 </html>
